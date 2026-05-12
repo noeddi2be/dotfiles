@@ -25,8 +25,7 @@ alias ls='eza --icons=always'
 alias la='ls -la'
 
 # Zoxide
-command -v zoxide >/dev/null 2>&1 && eval "$(zoxide init zsh)"
-alias cd='z'
+command -v zoxide >/dev/null 2>&1 && eval "$(zoxide init --cmd cd zsh)"
 
 # Vim keybindings
 bindkey -v
