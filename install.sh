@@ -26,4 +26,4 @@ fi
 
 rm -f "$HOME/.zshrc"
 cd "$HOME/dotfiles"
-stow -v -t "$HOME" tmux nvim linuxzsh alacritty
+stow -v -t "$HOME" tmux nvim linuxzsh alacritty opencode
