@@ -7,6 +7,7 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 export ZSH="$HOME/.oh-my-zsh"
+export PATH="$HOME/.opencode/bin:$PATH"
 
 # Theme
 ZSH_THEME="powerlevel10k/powerlevel10k"
@@ -41,4 +42,3 @@ fi
 
 autoload -Uz compinit && compinit
 
-export PATH="$HOME/.local/bin:$PATH"
