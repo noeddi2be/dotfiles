@@ -40,3 +40,5 @@ if [[ -d /usr/lib/jvm ]]; then
 fi
 
 autoload -Uz compinit && compinit
+
+export PATH="$HOME/.local/bin:$PATH"
