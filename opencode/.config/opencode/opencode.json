@@ -4,5 +4,10 @@
     "github-copilot": {
       "name": "github-copilot"
     }
+  },
+  "agents": {
+    "copilot": {
+      "provider": "github-copilot"
+    }
   }
 }
