@@ -20,6 +20,33 @@ require("lazy").setup({
     { "LazyVim/LazyVim", import = "lazyvim.plugins" },
     -- AI: Copilot autocomplete
     { import = "lazyvim.plugins.extras.ai.copilot" },
+    -- AI: Copilot inlline Prompt
+    { import = "lazyvim.plugins.extras.ai.copilot-chat" },
+    {
+      "CopilotC-Nvim/CopilotChat.nvim",
+      optional = true,
+      keys = {
+        {
+          "<leader>ai",
+          function()
+            local input = vim.fn.input("Ask Copilot: ")
+            if input ~= "" then
+              require("CopilotChat").ask("#buffer " .. input, { context = "buffer" })
+            end
+          end,
+          mode = "n", -- nur Normal Mode
+          desc = "Ask Copilot (whole buffer)",
+        },
+        {
+          "<leader>ai", -- Visual Mode übernimmt Selection automatisch
+          function()
+            require("CopilotChat").ask(vim.fn.input("Ask Copilot: "), { context = "selection" })
+          end,
+          mode = "v",
+          desc = "Ask Copilot (selection)",
+        },
+      },
+    },
     -- import/override with your plugins
     { import = "plugins" },
   },
