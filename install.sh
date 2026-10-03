@@ -2,7 +2,6 @@
 set -e
 
 sudo apt-get update
-#sudo apt-get install -y neovim stow zoxide eza git curl zsh
 sudo apt-get install -y stow zoxide eza git curl zsh
 
 if [ ! -d "$HOME/.oh-my-zsh" ]; then
