@@ -1,25 +1,20 @@
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block; everything else may go below.
 # Powerlevel10k instant prompt
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-export ZSH="$HOME/.oh-my-zsh"
 export PATH="$HOME/.opencode/bin:$PATH"
 
-# Theme
-ZSH_THEME="powerlevel10k/powerlevel10k"
+# Brew PATH
+export PATH="/home/linuxbrew/.linuxbrew/bin:$PATH"
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
-# Plugins
-plugins=(
-  git
-  zsh-autosuggestions
-  zsh-syntax-highlighting
-)
+# Theme (via Brew)
+source /home/linuxbrew/.linuxbrew/share/powerlevel10k/powerlevel10k.zsh-theme
 
-source $ZSH/oh-my-zsh.sh
+# Plugins (via Brew)
+source /home/linuxbrew/.linuxbrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /home/linuxbrew/.linuxbrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # Eza
 alias ls='eza --icons=always'
@@ -34,7 +29,7 @@ bindkey -v
 # p10k config
 [[ -f ~/.p10k.zsh ]] && source ~/.p10k.zsh
 
-# Java Home and Path variable
+# Java Home
 if [[ -d /usr/lib/jvm ]]; then
   export JAVA_HOME="$(dirname "$(dirname "$(readlink -f "$(command -v javac)")")")"
   export PATH="$JAVA_HOME/bin:$PATH"

@@ -1,14 +1,17 @@
+#General
+import = [
+    "~/.config/alacritty/themes/gruvbox_material_hard_dark_nom.toml"
+]
 
 [ env ]
 TERM = "xterm-256color"
-
 
 [window]
 padding.x = 10
 padding.y = 10
 opacity = 0.8
 blur = true
-dimensions = {columns = 80, lines = 30}
+dimensions = {columns = 100, lines = 30}
 
 decorations = "Buttonless"
 
@@ -16,10 +19,4 @@ decorations = "Buttonless"
 normal.family = "MesloLGS Nerd Font Mono"
 
 #regular
-size = 15
-
-[general]
-import = [
-    "~/.config/alacritty/themes/gruvbox_material_hard_dark_nom.toml"
-]
-
+size = 12
