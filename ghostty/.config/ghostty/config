@@ -3,6 +3,7 @@ background-opacity = 0.85
 theme = Everforest Dark Hard
 quit-after-last-window-closed = true
 font-family = "MesloLGS Nerd Font Mono"
+font-size = 16
 macos-titlebar-style = hidden
 macos-titlebar-style = tabs
 macos-window-buttons = hidden

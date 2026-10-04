@@ -29,3 +29,9 @@ export PATH="$JAVA_HOME/bin:$PATH"
 
 # Autoload Git Branches
 autoload -Uz compinit && compinit
+
+# The following lines have been added by Docker Desktop to enable Docker CLI completions.
+fpath=(/Users/nom/.docker/completions $fpath)
+autoload -Uz compinit
+(( ${+_comps[docker]} )) || compinit
+# End of Docker CLI completions
