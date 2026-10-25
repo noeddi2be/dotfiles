@@ -19,3 +19,8 @@ vim.api.nvim_create_autocmd("FileType", {
     vim.bo.expandtab = true
   end,
 })
+
+-- Dynamic clipboard configuration
+if vim.env.SSH_TTY then
+  vim.opt.clipboard = "unnamedplus"
+end
